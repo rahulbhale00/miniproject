@@ -28,7 +28,7 @@ ChartJS.register(
   ChartDataLabels
 );
 
-// Custom plugin to draw red dotted threshold line at y = 400
+// Custom plugin to draw threshold line at y = 35°C
 const drawThresholdLine = {
   id: "drawThresholdLine",
   beforeDraw(chart) {
@@ -41,7 +41,7 @@ const drawThresholdLine = {
     ctx.strokeStyle = "red";
     ctx.lineWidth = 2;
 
-    const yPosition = scales.y.getPixelForValue(400);
+    const yPosition = scales.y.getPixelForValue(35);
     ctx.moveTo(chartArea.left, yPosition);
     ctx.lineTo(chartArea.right, yPosition);
     ctx.stroke();
@@ -49,21 +49,21 @@ const drawThresholdLine = {
   },
 };
 
-const RealTimeFlameChart = () => {
-  const [flameData, setFlameData] = useState([]);
+const RealTimeTemperatureChart = () => {
+  const [tempData, setTempData] = useState([]);
   const [timestamps, setTimestamps] = useState([]);
-  const [currentFlame, setCurrentFlame] = useState(0);
+  const [currentTemp, setCurrentTemp] = useState(0);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         const res = await fetch("/api/serial_fake");
         const result = await res.json();
-        const newValue = result.flame;
+        const newValue = result.temperature;
 
-        setFlameData((prev) => [...prev.slice(-19), newValue]); // Keep last 20 values
+        setTempData((prev) => [...prev.slice(-19), newValue]); // Keep last 20 values
         setTimestamps((prev) => [...prev.slice(-10), new Date().toLocaleTimeString()]);
-        setCurrentFlame(newValue);
+        setCurrentTemp(newValue);
       } catch (error) {
         console.error("Error fetching data:", error);
       }
@@ -73,19 +73,18 @@ const RealTimeFlameChart = () => {
     return () => clearInterval(interval);
   }, []);
 
-  // Dynamic background & border based on sensor value
-  const isWarning = currentFlame < 400;
-  const bgColor = isWarning ? "glass_red" : "glass";
+  // Dynamic background & border based on temperature threshold
+  const isWarning = currentTemp > 35;
+  const bgColor = isWarning ? "glass_yellow" : "glass";
 
   const data = {
     labels: timestamps,
     datasets: [
       {
-        label: "Flame Sensor Data",
-        data: flameData,
-        borderColor: "rgba(255,99,132,1)",
-        backgroundColor: "rgba(255,99,132,0.2)",
-
+        label: "Temperature (°C)",
+        data: tempData,
+        borderColor: "rgba(255, 206, 86, 1)", // Yellow color
+        backgroundColor: "rgba(255, 206, 86, 0.2)",
         borderWidth: 3,
         pointRadius: 4,
         pointBackgroundColor: "white",
@@ -106,7 +105,7 @@ const RealTimeFlameChart = () => {
       },
       title: {
         display: true,
-        text: "Fire Detection",
+        text: "Temperature Detection (LM35 Sensor)",
         color: "#333",
         font: { size: 22, weight: "bold" },
       },
@@ -114,7 +113,7 @@ const RealTimeFlameChart = () => {
         display: true,
         color: "#000",
         font: { size: 12, weight: "bold" },
-        formatter: (value) => value, // Show data value on points
+        formatter: (value) => value.toFixed(1),
         anchor: "end",
         align: "top",
       },
@@ -133,28 +132,23 @@ const RealTimeFlameChart = () => {
       y: {
         title: {
           display: true,
-          text: "Flame Sensor Value",
+          text: "Temperature (°C)",
           color: "#333",
           font: { size: 14, weight: "bold" },
         },
         ticks: { color: "#333" },
         grid: { color: "rgba(0,0,0,0.1)" },
         min: 0,
-        max: 1200,
+        max: 100,
       },
     },
   };
 
   return (
-    <div className={` flex flex-col items-center justify-center p-4 w-[99%] h-[400px] ${bgColor}`}>
+    <div className={`flex flex-col items-center justify-center p-4 w-[99%] h-[400px] ${bgColor}`}>
       <Line data={data} options={options} plugins={[drawThresholdLine]} />
     </div>
   );
-  
 };
 
-export default RealTimeFlameChart;
-
-{/* <div className="mt-4 text-lg font-semibold">
-  🔥 Flame Sensor: <span className={`px-2 py-1 rounded ${isWarning ? "text-red-600" : "text-green-600"}`}>{currentFlame}</span>
-</div> */}
+export default RealTimeTemperatureChart;

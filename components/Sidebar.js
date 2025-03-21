@@ -6,7 +6,7 @@ import { Home, BarChart, Settings } from "lucide-react";
 export default function Sidebar({ isOpen }) {
   return (
     <aside
-      className={`bg-white text-black p-5 border-r border-gray-300 shadow-md transition-all duration-300 ${isOpen ? "w-64" : "w-24"
+      className={`bg-white glass my-2 ml-2 text-black p-5 border-r border-gray-300 shadow-md transition-all duration-300 ${isOpen ? "w-64" : "w-24"
         }`}
     >
       {/* Logo */}

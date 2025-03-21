@@ -1,20 +1,22 @@
 "use client";
-
-
-import { useState } from "react";
-import Sidebar from "@/components/Sidebar";
 import FlameChart from "@/components/flame_Sensor";
-import Navbar from "@/components/Navbar";
+import RealTimeGasChart from "@/components/Gas_Sensor";
+import RealTimeTemperatureChart from "@/components/RealTimeTemperatureChart";
+import RealTimeVibrationChart from "@/components/RealTimeVibrationChart";
+import InOutCounter from "@/components/InOutCounter";
 
 export default function Home() {
-  const [isSidebarOpen, setIsSidebarOpen] = useState(true);
-
   return (
-    <div className="flex">
-      
-        <div className="p-4">
-          <FlameChart />
-        </div>
+    <div className="flex min-h-screen overflow-y-scroll no-scrollbar w-[100%]">
+      <div className=" w-[60%] flex flex-col gap-3">
+        <FlameChart/>
+        <RealTimeGasChart />
+        <RealTimeTemperatureChart />
+        <RealTimeVibrationChart />
+      </div>
+      <div className="w-[40%] h-[87vh]">
+        <InOutCounter />
+      </div>
     </div>
   );
 }

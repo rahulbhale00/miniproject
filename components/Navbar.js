@@ -4,7 +4,7 @@ import { Menu } from "lucide-react";
 
 export default function Navbar({ onToggleSidebar }) {
   return (
-    <nav className="bg-white shadow-md p-4 flex items-center justify-between">
+    <nav  className="bg-white glass m-2 shadow-md p-4 flex items-center justify-between">
       <button onClick={onToggleSidebar} className="p-2 rounded-lg hover:bg-gray-200">
         <Menu size={24} />
       </button>

@@ -27,17 +27,16 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <div className="flex min-h-screen">
+
+        <div className="flex min-h-screen relative z-10">
           {/* Sidebar - Width dynamically changes */}
           <Sidebar isOpen={isSidebarOpen} />
-
           {/* Main content */}
           <div className="flex-1 flex flex-col transition-all duration-300">
             {/* Navbar with toggle button */}
             <Navbar onToggleSidebar={() => setIsSidebarOpen(!isSidebarOpen)} />
-
             {/* Page content */}
-            <div className="p-4">{children}</div>
+            <div className="px-2 ">{children}</div>
           </div>
         </div>
       </body>
