@@ -7,16 +7,14 @@ import InOutCounter from "@/components/InOutCounter";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen overflow-y-scroll no-scrollbar w-[100%]">
-      <div className=" w-[60%] flex flex-col gap-3">
-        <FlameChart/>
-        <RealTimeGasChart />
-        <RealTimeTemperatureChart />
-        <RealTimeVibrationChart />
-      </div>
-      <div className="w-[40%] h-[87vh]">
-        <InOutCounter />
-      </div>
+    <div className="grid grid-cols-5 gap-1 grid-rows-2 w-full h-[88vh]">
+      <div className="col-span-2 row-span-1"><FlameChart/></div>
+      <div className="col-span-2 row-span-1"><RealTimeGasChart /></div>
+      
+      <div className="col-span-1 row-span-2"><InOutCounter /></div>
+
+      <div className="col-span-2 row-span-1"><RealTimeTemperatureChart /></div>
+      <div className="col-span-2 row-span-1"><RealTimeVibrationChart /></div>
     </div>
   );
 }

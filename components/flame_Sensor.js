@@ -146,7 +146,7 @@ const RealTimeFlameChart = () => {
   };
 
   return (
-    <div className={` flex flex-col items-center justify-center p-4 w-[99%] h-[400px] ${bgColor}`}>
+    <div className={` flex flex-col items-center justify-center p-4 w-[99%] h-[315px] ${bgColor}`}>
       <Line data={data} options={options} plugins={[drawThresholdLine]} />
     </div>
   );

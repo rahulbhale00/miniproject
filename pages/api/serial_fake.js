@@ -6,13 +6,13 @@ function getRandomVariation(value, percentage = 10) {
 }
 
 let fakeData = {
-  out: 1,
-  totalInside: 5,
+  out: 3,
+  totalInside: 4,
   mq2: 450,
   flame: 700,
   vibration: 50,
   temperature: 25,
-  in: 4,
+  in: 7 ,
 };
 
 export default function handler(req, res) {
