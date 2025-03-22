@@ -1,12 +1,12 @@
 "use client";
 
 import Link from "next/link";
-import { Home, BarChart, Settings } from "lucide-react";
+import { Home, BarChart, Settings ,Activity} from "lucide-react";
 
 export default function Sidebar({ isOpen }) {
   return (
     <aside
-      className={`bg-white h-[99vh] glass my-2 ml-2 text-black p-5 border-r border-gray-300 shadow-md transition-all duration-300 ${isOpen ? "w-64" : "w-24"
+      className={`bg-white h-[98vh] glass my-1.5 ml-2 text-black p-5 border-r border-gray-300 shadow-md transition-all duration-300 ${isOpen ? "w-64" : "w-24"
         }`}
     >
       {/* Logo */}
@@ -27,13 +27,13 @@ export default function Sidebar({ isOpen }) {
           {isOpen && <span className="">Dashboard</span>}
         </Link>
         <Link
-            href="#"
+            href="/Sensors"
             className={`flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-300 transition ${isOpen && "w-full"} `}
           >
-            <Settings size={20}  />
+            <Activity  size={20}  />
             {isOpen && <span className="">Sensors</span>}
           </Link>
-        <Link href="/Analytics" className={`flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-300 transition ${isOpen && "w-full"} `}>
+        <Link href="#" className={`flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-300 transition ${isOpen && "w-full"} `}>
           <BarChart size={20} />
           {isOpen && <span className="">Analytics</span>}
         </Link>

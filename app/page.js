@@ -7,7 +7,7 @@ import InOutCounter from "@/components/InOutCounter";
 
 export default function Home() {
   return (
-    <div className="grid grid-cols-5 gap-1 grid-rows-2 w-full h-[88vh]">
+    <div className="grid overflow-y-auto no-scrollbar grid-cols-5 gap-1 grid-rows-2 w-full h-[88vh] pb-2">
       <div className="col-span-2 row-span-1"><FlameChart/></div>
       <div className="col-span-2 row-span-1"><RealTimeGasChart /></div>
       
