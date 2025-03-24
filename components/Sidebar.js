@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Home, BarChart, Settings ,Activity} from "lucide-react";
+import { Home, BarChart, Settings ,Activity ,Bell , Download} from "lucide-react";
 
 export default function Sidebar({ isOpen }) {
   return (
@@ -33,9 +33,9 @@ export default function Sidebar({ isOpen }) {
             <Activity  size={20}  />
             {isOpen && <span className="">Sensors</span>}
           </Link>
-        <Link href="#" className={`flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-300 transition ${isOpen && "w-full"} `}>
-          <BarChart size={20} />
-          {isOpen && <span className="">Analytics</span>}
+        <Link href="/download" className={`flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-300 transition ${isOpen && "w-full"} `}>
+          <Download size={20} />
+          {isOpen && <span className="">Data Download</span>}
         </Link>
         <Link href="#" className={`flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-300 transition ${isOpen && "w-full"} `}>
           <Settings size={20} />

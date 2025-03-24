@@ -6,7 +6,7 @@ function getRandomVariation(value, percentage = 10) {
 }
 
 let fakeData = {
-  out: 3,
+  out: 5,
   totalInside: 4,
   mq2: 450,
   flame: 700,
