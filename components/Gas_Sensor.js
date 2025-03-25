@@ -57,7 +57,7 @@ const RealTimeGasChart = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await fetch("/api/serial_fake");
+        const res = await fetch("/api/serial");
         const result = await res.json();
         const newValue = result.mq2;
 
@@ -69,7 +69,7 @@ const RealTimeGasChart = () => {
       }
     };
 
-    const interval = setInterval(fetchData, 2500);
+    const interval = setInterval(fetchData, 500);
     return () => clearInterval(interval);
   }, []);
 

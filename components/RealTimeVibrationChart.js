@@ -28,7 +28,7 @@ ChartJS.register(
   ChartDataLabels
 );
 
-// Custom plugin to draw green dotted threshold line at y = 900
+// Custom plugin to draw green dotted threshold line at y = 200
 const drawThresholdLine = {
   id: "drawThresholdLine",
   beforeDraw(chart) {
@@ -41,7 +41,7 @@ const drawThresholdLine = {
     ctx.strokeStyle = "red";
     ctx.lineWidth = 2;
 
-    const yPosition = scales.y.getPixelForValue(900);
+    const yPosition = scales.y.getPixelForValue(200);
     ctx.moveTo(chartArea.left, yPosition);
     ctx.lineTo(chartArea.right, yPosition);
     ctx.stroke();
@@ -57,7 +57,7 @@ const RealTimeVibrationChart = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await fetch("/api/serial_fake");
+        const res = await fetch("/api/serial");
         const result = await res.json();
         const newValue = result.vibration; // Update with correct API key
 
@@ -69,12 +69,12 @@ const RealTimeVibrationChart = () => {
       }
     };
 
-    const interval = setInterval(fetchData, 2500);
+    const interval = setInterval(fetchData, 100);
     return () => clearInterval(interval);
   }, []);
 
   // Dynamic background & border based on sensor value
-  const isWarning = currentVibration > 900;
+  const isWarning = currentVibration > 200;
   const bgColor = isWarning ? "glass_red" : "glass";
 
   const data = {

@@ -15,7 +15,7 @@ export default function BallAnimation() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await fetch("/api/serial_fake");
+        const res = await fetch("/api/serial");
         const result = await res.json();
         
         if (result.in > inCount) {
@@ -36,7 +36,7 @@ export default function BallAnimation() {
         
         setInCount(result.in || 0);
         setOutCount(result.out || 0);
-        setTotalInside(result.totalInside || 0);
+        setTotalInside(result.total || 0);
       } catch (error) {
         console.error("Error fetching data:", error);
       }
