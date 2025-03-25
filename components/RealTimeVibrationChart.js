@@ -57,7 +57,7 @@ const RealTimeVibrationChart = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await fetch("/api/serial_fake");
+        const res = await fetch("/api/serial");
         const result = await res.json();
         const newValue = result.vibration; // Update with correct API key
 

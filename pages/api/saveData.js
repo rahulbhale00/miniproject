@@ -36,7 +36,7 @@ async function saveData() {
       hour12: true,
     });
     
-    const response = await fetch("http://localhost:3000/api/serial_fake");
+    const response = await fetch("http://localhost:3000/api/serial");
     const data = await response.json();
 
     const newData = { timestamp, ...data };
