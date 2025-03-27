@@ -28,7 +28,7 @@ ChartJS.register(
   ChartDataLabels
 );
 
-// Custom plugin to draw threshold line at y = 35°C
+// Custom plugin to draw threshold line at y = 60°C
 const drawThresholdLine = {
   id: "drawThresholdLine",
   beforeDraw(chart) {
@@ -41,7 +41,7 @@ const drawThresholdLine = {
     ctx.strokeStyle = "red";
     ctx.lineWidth = 2;
 
-    const yPosition = scales.y.getPixelForValue(35);
+    const yPosition = scales.y.getPixelForValue(60);
     ctx.moveTo(chartArea.left, yPosition);
     ctx.lineTo(chartArea.right, yPosition);
     ctx.stroke();
@@ -62,19 +62,19 @@ const RealTimeTemperatureChart = () => {
         const newValue = result.temperature;
 
         setTempData((prev) => [...prev.slice(-19), newValue]); // Keep last 20 values
-        setTimestamps((prev) => [...prev.slice(-10), new Date().toLocaleTimeString()]);
+        setTimestamps((prev) => [...prev.slice(-15), new Date().toLocaleTimeString()]);
         setCurrentTemp(newValue);
       } catch (error) {
         console.error("Error fetching data:", error);
       }
     };
 
-    const interval = setInterval(fetchData, 500);
+    const interval = setInterval(fetchData, 100);
     return () => clearInterval(interval);
   }, []);
 
   // Dynamic background & border based on temperature threshold
-  const isWarning = currentTemp > 35;
+  const isWarning = currentTemp > 60;
   const bgColor = isWarning ? "glass_yellow" : "glass";
 
   const data = {
@@ -105,7 +105,7 @@ const RealTimeTemperatureChart = () => {
       },
       title: {
         display: true,
-        text: "Temperature Detection (LM35 Sensor)",
+        text: "Temperature Detection (LM60 Sensor)",
         color: "#333",
         font: { size: 22, weight: "bold" },
       },
@@ -126,7 +126,7 @@ const RealTimeTemperatureChart = () => {
           color: "#333",
           font: { size: 14, weight: "bold" },
         },
-        ticks: { color: "#333" },
+        ticks: { display: false },
         grid: { color: "rgba(0,0,0,0.1)" },
       },
       y: {

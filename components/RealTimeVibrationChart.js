@@ -126,7 +126,7 @@ const RealTimeVibrationChart = () => {
           color: "#333",
           font: { size: 14, weight: "bold" },
         },
-        ticks: { color: "#333" },
+        ticks: { display: false },
         grid: { color: "rgba(0,0,0,0.1)" },
       },
       y: {
@@ -138,8 +138,8 @@ const RealTimeVibrationChart = () => {
         },
         ticks: { color: "#333" },
         grid: { color: "rgba(0,0,0,0.1)" },
-        min: 0,
-        max: 1200,
+        min: -20,
+        max: 800,
       },
     },
   };

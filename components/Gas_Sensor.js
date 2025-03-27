@@ -28,7 +28,7 @@ ChartJS.register(
   ChartDataLabels
 );
 
-// Custom plugin to draw threshold line at y = 300
+// Custom plugin to draw threshold line at y = 400
 const drawThresholdLine = {
   id: "drawThresholdLine",
   beforeDraw(chart) {
@@ -41,7 +41,7 @@ const drawThresholdLine = {
     ctx.strokeStyle = "red";
     ctx.lineWidth = 2;
 
-    const yPosition = scales.y.getPixelForValue(300);
+    const yPosition = scales.y.getPixelForValue(400);
     ctx.moveTo(chartArea.left, yPosition);
     ctx.lineTo(chartArea.right, yPosition);
     ctx.stroke();
@@ -69,12 +69,12 @@ const RealTimeGasChart = () => {
       }
     };
 
-    const interval = setInterval(fetchData, 500);
+    const interval = setInterval(fetchData, 100);
     return () => clearInterval(interval);
   }, []);
 
   // Dynamic background & border based on sensor value
-  const isWarning = currentGasLevel < 300;
+  const isWarning = currentGasLevel > 400;
   const bgColor = isWarning ? "glass_red" : "glass";
 
   const data = {
@@ -126,7 +126,7 @@ const RealTimeGasChart = () => {
           color: "#333",
           font: { size: 14, weight: "bold" },
         },
-        ticks: { color: "#333" },
+        ticks: { display: false },
         grid: { color: "rgba(0,0,0,0.1)" },
       },
       y: {
@@ -139,7 +139,7 @@ const RealTimeGasChart = () => {
         ticks: { color: "#333" },
         grid: { color: "rgba(0,0,0,0.1)" },
         min: 0,
-        max: 1200,
+        max: 800,
       },
     },
   };
