@@ -1,0 +1,198 @@
+[
+  {
+    "timestamp": "2025-04-01T08:23:27.940Z",
+    "sensor": "flame",
+    "value": 0,
+    "threshold": 100,
+    "message": "flame value should not exceed 100"
+  },
+  {
+    "timestamp": "2025-04-01T08:23:28.142Z",
+    "sensor": "flame",
+    "value": 0,
+    "threshold": 100,
+    "message": "flame value should not exceed 100"
+  },
+  {
+    "timestamp": "2025-04-01T08:23:28.594Z",
+    "sensor": "flame",
+    "value": 0,
+    "threshold": 100,
+    "message": "flame value should not exceed 100"
+  },
+  {
+    "timestamp": "2025-04-01T08:23:29.480Z",
+    "sensor": "flame",
+    "value": 0,
+    "threshold": 100,
+    "message": "flame value should not exceed 100"
+  },
+  {
+    "timestamp": "2025-04-01T08:23:29.914Z",
+    "sensor": "flame",
+    "value": 0,
+    "threshold": 100,
+    "message": "flame value should not exceed 100"
+  },
+  {
+    "timestamp": "2025-04-01T08:23:30.400Z",
+    "sensor": "flame",
+    "value": 0,
+    "threshold": 100,
+    "message": "flame value should not exceed 100"
+  },
+  {
+    "timestamp": "2025-04-01T08:23:56.799Z",
+    "sensor": "flame",
+    "value": 40,
+    "threshold": 100,
+    "message": "flame value should not exceed 100"
+  },
+  {
+    "timestamp": "2025-04-01T08:23:57.294Z",
+    "sensor": "flame",
+    "value": 44,
+    "threshold": 100,
+    "message": "flame value should not exceed 100"
+  },
+  {
+    "timestamp": "2025-04-01T08:23:57.793Z",
+    "sensor": "flame",
+    "value": 47,
+    "threshold": 100,
+    "message": "flame value should not exceed 100"
+  },
+  {
+    "timestamp": "2025-04-01T08:23:58.301Z",
+    "sensor": "vibration",
+    "value": 251,
+    "threshold": 200,
+    "message": "vibration value should not exceed 200"
+  },
+  {
+    "timestamp": "2025-04-01T08:23:58.842Z",
+    "sensor": "vibration",
+    "value": 251,
+    "threshold": 200,
+    "message": "vibration value should not exceed 200"
+  },
+  {
+    "timestamp": "2025-04-01T08:24:07.907Z",
+    "sensor": "vibration",
+    "value": 318,
+    "threshold": 200,
+    "message": "vibration value should not exceed 200"
+  },
+  {
+    "timestamp": "2025-04-01T08:24:08.416Z",
+    "sensor": "vibration",
+    "value": 324,
+    "threshold": 200,
+    "message": "vibration value should not exceed 200"
+  },
+  {
+    "timestamp": "2025-04-01T08:24:33.200Z",
+    "sensor": "mq2",
+    "value": 409,
+    "threshold": 400,
+    "message": "mq2 value should not exceed 400"
+  },
+  {
+    "timestamp": "2025-04-01T08:24:34.195Z",
+    "sensor": "mq2",
+    "value": 828,
+    "threshold": 400,
+    "message": "mq2 value should not exceed 400"
+  },
+  {
+    "timestamp": "2025-04-01T08:24:34.692Z",
+    "sensor": "mq2",
+    "value": 875,
+    "threshold": 400,
+    "message": "mq2 value should not exceed 400"
+  },
+  {
+    "timestamp": "2025-04-01T08:24:35.197Z",
+    "sensor": "vibration",
+    "value": 288,
+    "threshold": 200,
+    "message": "vibration value should not exceed 200"
+  },
+  {
+    "timestamp": "2025-04-01T08:25:03.513Z",
+    "sensor": "mq2",
+    "value": 846,
+    "threshold": 400,
+    "message": "mq2 value should not exceed 400"
+  },
+  {
+    "timestamp": "2025-04-01T08:25:04.007Z",
+    "sensor": "mq2",
+    "value": 897,
+    "threshold": 400,
+    "message": "mq2 value should not exceed 400"
+  },
+  {
+    "timestamp": "2025-04-01T08:25:04.008Z",
+    "sensor": "vibration",
+    "value": 219,
+    "threshold": 200,
+    "message": "vibration value should not exceed 200"
+  },
+  {
+    "timestamp": "2025-04-01T08:25:04.506Z",
+    "sensor": "mq2",
+    "value": 897,
+    "threshold": 400,
+    "message": "mq2 value should not exceed 400"
+  },
+  {
+    "timestamp": "2025-04-01T08:25:04.508Z",
+    "sensor": "vibration",
+    "value": 219,
+    "threshold": 200,
+    "message": "vibration value should not exceed 200"
+  },
+  {
+    "timestamp": "2025-04-01T08:25:05.012Z",
+    "sensor": "mq2",
+    "value": 918,
+    "threshold": 400,
+    "message": "mq2 value should not exceed 400"
+  },
+  {
+    "timestamp": "2025-04-01T08:28:22.254Z",
+    "sensor": "temperature",
+    "value": 70.38,
+    "threshold": 60,
+    "message": "temperature value should not exceed 60"
+  },
+  {
+    "timestamp": "2025-04-01T08:28:23.272Z",
+    "sensor": "vibration",
+    "value": 247,
+    "threshold": 200,
+    "message": "vibration value should not exceed 200"
+  },
+  {
+    "timestamp": "2025-04-01T08:28:26.598Z",
+    "sensor": "temperature",
+    "value": 433.53,
+    "threshold": 60,
+    "message": "temperature value should not exceed 60"
+  },
+  {
+    "timestamp": "2025-04-01T08:28:31.430Z",
+    "sensor": "vibration",
+    "value": 327,
+    "threshold": 200,
+    "message": "vibration value should not exceed 200"
+  },
+  {
+    "timestamp": "2025-04-01T08:28:34.900Z",
+    "sensor": "vibration",
+    "value": 322,
+    "threshold": 200,
+    "message": "vibration value should not exceed 200"
+  }
+]

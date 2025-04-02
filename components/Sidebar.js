@@ -37,9 +37,9 @@ export default function Sidebar({ isOpen }) {
           <Download size={20} />
           {isOpen && <span className="">Data Download</span>}
         </Link>
-        <Link href="#" className={`flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-300 transition ${isOpen && "w-full"} `}>
-          <Settings size={20} />
-          {isOpen && <span className="">Settings</span>}
+        <Link href="/alerts" className={`flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-300 transition ${isOpen && "w-full"} `}>
+          <Bell size={20} />
+          {isOpen && <span className="">Alerts</span>}
         </Link>
       </nav>
     </aside>

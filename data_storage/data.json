@@ -4650,5 +4650,305 @@
     "in": 2,
     "out": 6,
     "total": -4
+  },
+  {
+    "timestamp": "27 March 2025 at 05:26:50 pm",
+    "mq2": 22,
+    "vibration": 1,
+    "flame": 700,
+    "temperature": 25.42,
+    "in": 0,
+    "out": 0,
+    "total": 0
+  },
+  {
+    "timestamp": "27 March 2025 at 05:27:00 pm",
+    "mq2": 23,
+    "vibration": 0,
+    "flame": 737,
+    "temperature": 24.44,
+    "in": 0,
+    "out": 0,
+    "total": 0
+  },
+  {
+    "timestamp": "27 March 2025 at 05:27:10 pm",
+    "mq2": 22,
+    "vibration": 1,
+    "flame": 738,
+    "temperature": 24.93,
+    "in": 0,
+    "out": 1,
+    "total": -1
+  },
+  {
+    "timestamp": "27 March 2025 at 05:27:20 pm",
+    "mq2": 22,
+    "vibration": 0,
+    "flame": 731,
+    "temperature": 24.93,
+    "in": 4,
+    "out": 5,
+    "total": -1
+  },
+  {
+    "timestamp": "27 March 2025 at 05:27:30 pm",
+    "mq2": 23,
+    "vibration": 0,
+    "flame": 733,
+    "temperature": 24.44,
+    "in": 4,
+    "out": 7,
+    "total": -3
+  },
+  {
+    "timestamp": "27 March 2025 at 05:27:40 pm",
+    "mq2": 23,
+    "vibration": 1,
+    "flame": 732,
+    "temperature": 24.93,
+    "in": 4,
+    "out": 7,
+    "total": -3
+  },
+  {
+    "timestamp": "27 March 2025 at 05:27:50 pm",
+    "mq2": 22,
+    "vibration": 0,
+    "flame": 725,
+    "temperature": 24.93,
+    "in": 4,
+    "out": 7,
+    "total": -3
+  },
+  {
+    "timestamp": "27 March 2025 at 05:28:00 pm",
+    "mq2": 23,
+    "vibration": 0,
+    "flame": 745,
+    "temperature": 24.93,
+    "in": 4,
+    "out": 7,
+    "total": -3
+  },
+  {
+    "timestamp": "27 March 2025 at 05:28:10 pm",
+    "mq2": 23,
+    "vibration": 0,
+    "flame": 766,
+    "temperature": 24.44,
+    "in": 4,
+    "out": 7,
+    "total": -3
+  },
+  {
+    "timestamp": "27 March 2025 at 05:28:20 pm",
+    "mq2": 22,
+    "vibration": 1,
+    "flame": 751,
+    "temperature": 24.93,
+    "in": 4,
+    "out": 7,
+    "total": -3
+  },
+  {
+    "timestamp": "27 March 2025 at 05:28:30 pm",
+    "mq2": 23,
+    "vibration": 0,
+    "flame": 736,
+    "temperature": 24.93,
+    "in": 4,
+    "out": 7,
+    "total": -3
+  },
+  {
+    "timestamp": "27 March 2025 at 05:28:40 pm",
+    "mq2": 22,
+    "vibration": 0,
+    "flame": 773,
+    "temperature": 24.44,
+    "in": 4,
+    "out": 7,
+    "total": -3
+  },
+  {
+    "timestamp": "27 March 2025 at 05:28:50 pm",
+    "mq2": 22,
+    "vibration": 0,
+    "flame": 724,
+    "temperature": 24.93,
+    "in": 4,
+    "out": 7,
+    "total": -3
+  },
+  {
+    "timestamp": "27 March 2025 at 05:29:10 pm",
+    "mq2": 23,
+    "vibration": 0,
+    "flame": 803,
+    "temperature": 23.95,
+    "in": 4,
+    "out": 7,
+    "total": -3
+  },
+  {
+    "timestamp": "27 March 2025 at 05:29:20 pm",
+    "mq2": 23,
+    "vibration": 0,
+    "flame": 814,
+    "temperature": 23.46,
+    "in": 4,
+    "out": 7,
+    "total": -3
+  },
+  {
+    "timestamp": "27 March 2025 at 05:29:30 pm",
+    "mq2": 22,
+    "vibration": 3,
+    "flame": 743,
+    "temperature": 24.93,
+    "in": 4,
+    "out": 7,
+    "total": -3
+  },
+  {
+    "timestamp": "27 March 2025 at 05:29:40 pm",
+    "mq2": 22,
+    "vibration": 3,
+    "flame": 743,
+    "temperature": 24.93,
+    "in": 4,
+    "out": 7,
+    "total": -3
+  },
+  {
+    "timestamp": "27 March 2025 at 05:29:50 pm",
+    "mq2": 22,
+    "vibration": 3,
+    "flame": 743,
+    "temperature": 24.93,
+    "in": 4,
+    "out": 7,
+    "total": -3
+  },
+  {
+    "timestamp": "27 March 2025 at 05:30:00 pm",
+    "mq2": 22,
+    "vibration": 3,
+    "flame": 743,
+    "temperature": 24.93,
+    "in": 4,
+    "out": 7,
+    "total": -3
+  },
+  {
+    "timestamp": "27 March 2025 at 05:30:10 pm",
+    "mq2": 22,
+    "vibration": 3,
+    "flame": 743,
+    "temperature": 24.93,
+    "in": 4,
+    "out": 7,
+    "total": -3
+  },
+  {
+    "timestamp": "1 April 2025 at 12:49:50 pm",
+    "mq2": 43,
+    "vibration": 0,
+    "flame": 514,
+    "temperature": 30.79,
+    "in": 0,
+    "out": 0,
+    "total": 0
+  },
+  {
+    "timestamp": "1 April 2025 at 12:50:00 pm",
+    "mq2": 42,
+    "vibration": 0,
+    "flame": 510,
+    "temperature": 30.79,
+    "in": 0,
+    "out": 0,
+    "total": 0
+  },
+  {
+    "timestamp": "1 April 2025 at 12:50:10 pm",
+    "mq2": 41,
+    "vibration": 0,
+    "flame": 513,
+    "temperature": 30.79,
+    "in": 0,
+    "out": 0,
+    "total": 0
+  },
+  {
+    "timestamp": "1 April 2025 at 12:50:20 pm",
+    "mq2": 40,
+    "vibration": 1,
+    "flame": 523,
+    "temperature": 30.3,
+    "in": 0,
+    "out": 0,
+    "total": 0
+  },
+  {
+    "timestamp": "1 April 2025 at 01:58:40 pm",
+    "mq2": 42,
+    "vibration": 0,
+    "flame": 470,
+    "temperature": 32.26,
+    "in": 11,
+    "out": 171,
+    "total": -160
+  },
+  {
+    "timestamp": "1 April 2025 at 01:58:50 pm",
+    "mq2": 42,
+    "vibration": 0,
+    "flame": 468,
+    "temperature": 32.26,
+    "in": 11,
+    "out": 171,
+    "total": -160
+  },
+  {
+    "timestamp": "1 April 2025 at 01:59:00 pm",
+    "mq2": 41,
+    "vibration": 0,
+    "flame": 467,
+    "temperature": 32.26,
+    "in": 11,
+    "out": 171,
+    "total": -160
+  },
+  {
+    "timestamp": "1 April 2025 at 01:59:10 pm",
+    "mq2": 41,
+    "vibration": 0,
+    "flame": 461,
+    "temperature": 32.26,
+    "in": 13,
+    "out": 172,
+    "total": -159
+  },
+  {
+    "timestamp": "1 April 2025 at 01:59:20 pm",
+    "mq2": 41,
+    "vibration": 0,
+    "flame": 460,
+    "temperature": 32.26,
+    "in": 24,
+    "out": 172,
+    "total": -148
+  },
+  {
+    "timestamp": "1 April 2025 at 01:59:30 pm",
+    "mq2": 40,
+    "vibration": 0,
+    "flame": 441,
+    "temperature": 32.26,
+    "in": 24,
+    "out": 172,
+    "total": -148
   }
 ]

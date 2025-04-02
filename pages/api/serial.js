@@ -18,7 +18,7 @@ let latestData = {
 };
 
 parser.on("data", (data) => {
-  console.log("Original Data:", data);
+  // console.log("Original Data:", data);
   const cleanedData = data.trim();
 
   // Regular Expression to match all parameters
@@ -38,7 +38,7 @@ parser.on("data", (data) => {
       total: parseInt(match[7], 10),
     };
 
-    console.log("Parsed Data:", latestData);
+    // console.log("Parsed Data:", latestData);
   }
 });
 
