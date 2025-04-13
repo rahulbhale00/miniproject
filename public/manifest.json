@@ -1,7 +1,7 @@
 {
-    "name": "My Next.js PWA",
-    "short_name": "NextPWA",
-    "description": "A Progressive Web App built with Next.js",
+    "name": "Industrial Fault Monitoring System",
+    "short_name": "Industrial Fault Monitoring System",
+    "description": "Industrial Fault Monitoring System",
     "start_url": "/",
     "display": "standalone",
     "background_color": "#ffffff",

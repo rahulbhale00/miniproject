@@ -28,7 +28,7 @@ ChartJS.register(
   ChartDataLabels
 );
 
-// Custom plugin to draw red dotted threshold line at y = 100
+// Custom plugin to draw red dotted threshold line at y = 200
 const drawThresholdLine = {
   id: "drawThresholdLine",
   beforeDraw(chart) {
@@ -41,7 +41,7 @@ const drawThresholdLine = {
     ctx.strokeStyle = "red";
     ctx.lineWidth = 2;
 
-    const yPosition = scales.y.getPixelForValue(100);
+    const yPosition = scales.y.getPixelForValue(200);
     ctx.moveTo(chartArea.left, yPosition);
     ctx.lineTo(chartArea.right, yPosition);
     ctx.stroke();
@@ -62,19 +62,19 @@ const RealTimeFlameChart = () => {
         const newValue = result.flame;
 
         setFlameData((prev) => [...prev.slice(-19), newValue]); // Keep last 20 values
-        setTimestamps((prev) => [...prev.slice(-15), new Date().toLocaleTimeString()]);
+        setTimestamps((prev) => [...prev.slice(-12), new Date().toLocaleTimeString()]);
         setCurrentFlame(newValue);
       } catch (error) {
         console.error("Error fetching data:", error);
       }
     };
 
-    const interval = setInterval(fetchData, 100);
+    const interval = setInterval(fetchData, 200);
     return () => clearInterval(interval);
   }, []);
 
   // Dynamic background & border based on sensor value
-  const isWarning = currentFlame < 100;
+  const isWarning = currentFlame < 200;
   const bgColor = isWarning ? "glass_red" : "glass";
 
   const data = {
@@ -146,7 +146,7 @@ const RealTimeFlameChart = () => {
   };
 
   return (
-    <div className={` flex flex-col items-center justify-center p-4 w-[99%] h-[315px] ${bgColor}`}>
+    <div className={` flex flex-col items-center justify-center p-4 w-[99%] h-[99%] ${bgColor}`}>
       <Line data={data} options={options} plugins={[drawThresholdLine]} />
     </div>
   );

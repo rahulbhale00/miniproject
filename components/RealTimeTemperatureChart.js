@@ -62,7 +62,7 @@ const RealTimeTemperatureChart = () => {
         const newValue = result.temperature;
 
         setTempData((prev) => [...prev.slice(-19), newValue]); // Keep last 20 values
-        setTimestamps((prev) => [...prev.slice(-15), new Date().toLocaleTimeString()]);
+        setTimestamps((prev) => [...prev.slice(-12), new Date().toLocaleTimeString()]);
         setCurrentTemp(newValue);
       } catch (error) {
         console.error("Error fetching data:", error);
@@ -145,7 +145,7 @@ const RealTimeTemperatureChart = () => {
   };
 
   return (
-    <div className={`flex flex-col items-center justify-center p-4 w-[99%] h-[315px] ${bgColor}`}>
+    <div className={`flex flex-col items-center justify-center p-4 w-[99%] h-[99%] ${bgColor}`}>
       <Line data={data} options={options} plugins={[drawThresholdLine]} />
     </div>
   );

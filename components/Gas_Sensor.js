@@ -62,7 +62,7 @@ const RealTimeGasChart = () => {
         const newValue = result.mq2;
 
         setGasData((prev) => [...prev.slice(-19), newValue]); // Keep last 20 values
-        setTimestamps((prev) => [...prev.slice(-10), new Date().toLocaleTimeString()]);
+        setTimestamps((prev) => [...prev.slice(-15), new Date().toLocaleTimeString()]);
         setCurrentGasLevel(newValue);
       } catch (error) {
         console.error("Error fetching data:", error);
@@ -136,16 +136,19 @@ const RealTimeGasChart = () => {
           color: "#333",
           font: { size: 14, weight: "bold" },
         },
-        ticks: { color: "#333" },
+        ticks: {
+          color: "#333",
+          stepSize: 150, // Decrease divisions by setting stepSize (adjust as needed)
+        },
         grid: { color: "rgba(0,0,0,0.1)" },
         min: 0,
-        max: 800,
+        max: 1050,
       },
     },
   };
   
   return (
-    <div className={` flex flex-col items-center justify-center p-4 w-[99%] h-[315px] ${bgColor}`}>
+    <div className={` flex flex-col items-center justify-center p-4 w-[99%] h-[99%] ${bgColor}`}>
       <Line data={data} options={options} plugins={[drawThresholdLine]} />
     </div>
   );
