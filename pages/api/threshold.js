@@ -5,7 +5,7 @@ const DATA_STORAGE_PATH = path.join(process.cwd(), "data_storage", "threshold_al
 const THRESHOLDS = {
   mq2: 400,
   vibration: 200,
-  flame: 100,
+  flame: 500,
   temperature: 60,
 };
 

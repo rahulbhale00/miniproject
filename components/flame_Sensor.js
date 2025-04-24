@@ -28,7 +28,7 @@ ChartJS.register(
   ChartDataLabels
 );
 
-// Custom plugin to draw red dotted threshold line at y = 200
+// Custom plugin to draw red dotted threshold line at y = 500
 const drawThresholdLine = {
   id: "drawThresholdLine",
   beforeDraw(chart) {
@@ -41,7 +41,7 @@ const drawThresholdLine = {
     ctx.strokeStyle = "red";
     ctx.lineWidth = 2;
 
-    const yPosition = scales.y.getPixelForValue(200);
+    const yPosition = scales.y.getPixelForValue(500);
     ctx.moveTo(chartArea.left, yPosition);
     ctx.lineTo(chartArea.right, yPosition);
     ctx.stroke();
@@ -69,12 +69,12 @@ const RealTimeFlameChart = () => {
       }
     };
 
-    const interval = setInterval(fetchData, 200);
+    const interval = setInterval(fetchData, 500);
     return () => clearInterval(interval);
   }, []);
 
   // Dynamic background & border based on sensor value
-  const isWarning = currentFlame < 200;
+  const isWarning = currentFlame < 500;
   const bgColor = isWarning ? "glass_red" : "glass";
 
   const data = {
@@ -140,7 +140,7 @@ const RealTimeFlameChart = () => {
         ticks: { color: "#333" },
         grid: { color: "rgba(0,0,0,0.1)" },
         min: 0,
-        max: 1200,
+        max: 1500,
       },
     },
   };

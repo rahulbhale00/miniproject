@@ -38,12 +38,14 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        {/* PWA Manifest & Icons */}
+        <meta name="viewport" content="width=1920, user-scalable=yes, initial-scale=0.25" />
+        <meta name="screen-orientation" content="landscape" />
         <link rel="manifest" href="/manifest.json" />
         <meta name="theme-color" content="#000000" />
         <link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png" />
         <link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png" />
       </head>
+
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <div className="flex min-h-screen relative z-10">
           {/* Sidebar - Width dynamically changes */}
